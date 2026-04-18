@@ -1,6 +1,6 @@
 const str = 'bcadfgh';
 let trimMyArr = str.split('');
-function hasUnique(str) {
+function hasUnique() {
   const seen = new Set();
 
   for (let i = 0; i < trimMyArr.length; i++) {
@@ -17,3 +17,18 @@ function hasUnique(str) {
 }
 
 hasUnique();
+
+const str1 = 'glffgfjmnkopqrstt';
+function secondWindow(myArr) {
+  const myMap = new Set();
+  for (let i = 0; i < myArr.length; i++) {
+    let char = myArr[i];
+    if (myMap.has(char)) {
+      return console.log(false);
+    }
+    myMap.add(char);
+  }
+  return console.log(true);
+}
+
+secondWindow(str1.split(''));
